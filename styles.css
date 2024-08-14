@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.calc_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: 5px solid white;
+    padding: 10px;
+}
+
+.calc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.display {
+    border: 3px solid white;
+    padding: 3px 5px;
+    width: 100%;
+    font-size: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+}
+
+.func_btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.nums {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin: 5px;
+}
