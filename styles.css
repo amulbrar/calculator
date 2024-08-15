@@ -110,4 +110,17 @@ button {
     height: 60px;
     font-size: 24px;
     margin: 5px;
+    font-weight: bold;
+}
+
+.func_btns .clearBtn {
+    background-color: red;
+}
+
+.func_btns button {
+    background-color: rgb(255, 255, 119);
+}
+
+.func_btns .equalsBtn {
+    background-color: rgb(36, 36, 255);
 }

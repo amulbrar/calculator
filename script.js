@@ -75,34 +75,35 @@ clearBtn.addEventListener('click', () => {
 const addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener('click', () => {
     display.textContent += " + "
+    operator = "+";
 })
 
 const subtractBtn = document.querySelector(".subtractBtn");
 subtractBtn.addEventListener('click', () => {
     display.textContent += " - "
+    operator = "-";
 })
 
 const multiplyBtn = document.querySelector(".multiplyBtn");
 multiplyBtn.addEventListener('click', () => {
     display.textContent += " x "
+    operator = "x";
 })
 
 const divideBtn = document.querySelector(".divideBtn");
 divideBtn.addEventListener('click', () => {
     display.textContent += " / "
+    operator = "/";
 })
 
 const equalsBtn = document.querySelector(".equalsBtn");
 equalsBtn.addEventListener('click', () => {
     let displayVal = display.textContent;
-    for (let i = 0; i < displayVal.length; i++) {
-        if (isNaN(displayVal[i])) {
-            if (displayVal[i] !== " ") {
-                operator = displayVal[i];
-                firstNum = parseInt(displayVal.slice(0, i - 1));
-                secondNum = parseInt(displayVal.slice(i + 1));
-            }
-        }
-    }
-    display.textContent = operate(firstNum, operator, secondNum)
+
+    let i = displayVal.indexOf(operator);
+    firstNum = parseInt(displayVal.slice(0, i - 1));
+    secondNum = parseInt(displayVal.slice(i + 1));
+
+    display.textContent = operate(firstNum, operator, secondNum);
+    
 })
